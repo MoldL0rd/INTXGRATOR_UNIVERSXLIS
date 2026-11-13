@@ -1,0 +1,10 @@
+import matpolotlib.pyplot as plt
+import numpy as np
+
+dt, e =np.loadtxt("dt_errore.dat", unpack=True, usecols=(0, 1))
+plt.loglog(dt, e, color="b", linestyle="-")
+plt.title("Errore al variare di dt")
+plt.xlabel("dt")
+plt.ylabel("Errore globale")
+plt.savefig("ultimo_grafico_errore_dt.png")
+plt.show()

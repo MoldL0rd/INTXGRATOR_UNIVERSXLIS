@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x, v = np.loadtxt("dati.dat", unpack=True, usecols=(1, 2))
+plt.plot(x, v, label="Spazio delle fasi", color="g", linestyle="-")
+plt.xlabel("Posizione");
+plt.ylabel("Velocità");
+plt.savefig("ultimospaziofasi.png")
+plt.show()
